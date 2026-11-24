@@ -1,0 +1,33 @@
+Gradle is powerful tool used to compile the project.
+It run the project & download the dependencies
+
+useful commands.
+./gradlew tasks
+It gives list of all things that our project is able to do
+
+for doing specific task
+
+./gradlew tasks | grep -i apollo
+It gives all things related to apollo in the project
+
+eg:-
+./gradlew tasks | grep -i compile
+./gradlew tasks | grep -i kotlin
+./gradlew :hello:tasks --all | grep -i kotlin
+
+We have to include all directories in settings.gradle.kts
+file so that it is considered as module and gradle can go there and can pick those
+run command ./gradlew project
+Note: you need to sync android studio after that
+
+
+gradle only compile all files having extension .kt
+
+libs.version.toml file is used to manage dependencies
+
+we can use same dependencies versions in more than 1 module as well
+
+if you want that one module/project in your project communicates with another module/project
+add that module/project in dependency by below example
+Here I want hello module to use some function present in rick module so I need to add rick module here
+implementation(project(":rick"))

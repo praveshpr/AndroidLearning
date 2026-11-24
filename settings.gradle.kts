@@ -21,5 +21,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-include("hello")
+include("hello", "rick")
 rootProject.name = "Unicornfactory"
